@@ -16,8 +16,8 @@ const useSearchResults = (query: string, categories: string[]) => {
     queryKey: ['search', category, query],
     queryFn: () => fetchSearchResults(category, query),
     enabled: !!query, // Enable query only if `query` is not empty
-     staleTime: 1 * 60 * 1000, 
-     cacheTime: 5 * 60 * 1000
+    staleTime: 1 * 60 * 1000,
+    cacheTime: 5 * 60 * 1000
   }));
 
   // Pass query configurations to `useQueries`
