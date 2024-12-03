@@ -22,7 +22,8 @@ const SearchResults: React.FC<SearchResultsProps> = (props) => {
         <div>
            {!!isLoading && <Loader />}
            {!!isError && <Error />}
-          {!isLoading && !isError && categories && categories.map((cat, index) =>
+           {!isLoading && !isError && categories && categories.length===0 && <>not found</>}
+          {!isLoading && !isError && categories.length && categories.map((cat, index) =>
             <CategoryResults key={index} category={cat} query={query} results={results[cat]} onViewAll={() => handleCategorySelect(cat)} />
           )}
         </div>

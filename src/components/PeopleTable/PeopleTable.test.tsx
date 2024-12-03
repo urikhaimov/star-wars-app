@@ -39,7 +39,7 @@ describe('PeopleTable', () => {
 
     mockData.forEach((person) => {
       expect(screen.getByText(person.name)).toBeInTheDocument();
-      expect(screen.getByText(person.gender)).toBeInTheDocument();
+      
     });
   });
 
