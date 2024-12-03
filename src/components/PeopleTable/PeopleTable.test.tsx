@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import PeopleTable from './PeopleTable';
-
-const mockData = [
+import { Person } from '../../types/swapi';
+const mockData: Person[] = [
   {
     name: 'Luke Skywalker',
     gender: 'male',
