@@ -32,7 +32,7 @@ describe('CategoryResults', () => {
     render(<CategoryResults {...defaultProps} />);
 
     // Assert each result is rendered
-    const resultItems = screen.getAllByRole('heading');
+    //const resultItems = screen.getAllByRole('heading');
    
     expect(screen.getByText('Luke Skywalker')).toBeInTheDocument();
     expect(screen.getByText('Leia Organa')).toBeInTheDocument();

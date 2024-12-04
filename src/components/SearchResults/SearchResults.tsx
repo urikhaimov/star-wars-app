@@ -20,7 +20,7 @@ const SearchResults: React.FC<SearchResultsProps> = (props) => {
   const { query, categories } = props;
   let navigate = useNavigate();
   const handleCategorySelect = (category: string) => {
-    navigate(`/${category}`);
+    navigate(`/star-wars-app/${category}`);
   };
   const { results, isLoading, isError } = useSearchResults(query, categories)
   

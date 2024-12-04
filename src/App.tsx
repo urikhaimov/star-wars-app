@@ -11,9 +11,9 @@ const App: React.FC = () => {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<SearchPage />} />
-          <Route path="/people" element={<PeoplePage />} />
-          <Route path="/:category" element={<h1>Category Page</h1>} />
+          <Route path="/star-wars-app/" element={<SearchPage />} />
+          <Route path="/star-wars-app/people" element={<PeoplePage />} />
+          <Route path="/star-wars-app/:category" element={<h1>Category Page</h1>} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
