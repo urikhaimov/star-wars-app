@@ -3,13 +3,9 @@
 [![CICD.Build](https://github.com/urikhaimov/star-wars-app/actions/workflows/build.yml/badge.svg)](https://github.com/urikhaimov/star-wars-app/actions/workflows/build.yml)
 [![Deploy static content to Pages](https://github.com/urikhaimov/star-wars-app/actions/workflows/static.yml/badge.svg)](https://github.com/urikhaimov/star-wars-app/actions/workflows/static.yml)
 
-```markdown
-# Project Name
 
-## Overview
-
-Provide a brief description of your project here. Explain what the project does, its main features, and any other relevant information that gives a clear understanding of the project's purpose.
-
+# StarWars App
+    
 ## Installation
 
 To install the project dependencies, run the following command:
@@ -28,10 +24,6 @@ This project uses `vitest` for testing. To run the tests, use the following comm
 npm test
 ```
 
-## Usage
-
-Provide instructions on how to use the project. This could include code examples, configuration options, or any other relevant information that helps users understand how to work with the project.
-
 ## Contributing
 
 If you would like to contribute to this project, please follow these guidelines:
@@ -41,16 +33,3 @@ If you would like to contribute to this project, please follow these guidelines:
 3. Make your changes and commit them with clear and concise messages.
 4. Push your changes to your fork.
 5. Submit a pull request to the main repository.
-
-## License
-
-Include the license information for your project here. For example:
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-Provide contact information or links to where users can reach out for support or questions. This could include an email address, a link to a discussion forum, or other relevant contact methods.
-```
-
-Make sure to replace placeholders like "Project Name" and "Overview" with actual information about your project. If there are additional scripts or dependencies in your `package.json`, you might want to include those in the `Scripts` or `Installation` sections as well.
