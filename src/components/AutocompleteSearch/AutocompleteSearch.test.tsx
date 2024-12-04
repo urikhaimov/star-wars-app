@@ -1,11 +1,11 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AutocompleteSearch, { AutocompleteSearchProps } from './AutocompleteSearch';
+import { describe, expect, it, vi } from 'vitest';
+import AutocompleteSearch from './AutocompleteSearch';
 
 describe('AutocompleteSearch', () => {
   it('renders the input field with the correct value', () => {
-    const mockHandleSearchChange = jest.fn();
+    const mockHandleSearchChange = vi.fn();
     const query = 'Luke Skywalker';
 
     render(<AutocompleteSearch query={query} handleSearchChange={mockHandleSearchChange} />);
@@ -17,7 +17,7 @@ describe('AutocompleteSearch', () => {
   });
 
   it('calls the handleSearchChange function when the input value changes', () => {
-    const mockHandleSearchChange = jest.fn();
+    const mockHandleSearchChange = vi.fn();
     const query = '';
 
     render(<AutocompleteSearch query={query} handleSearchChange={mockHandleSearchChange} />);

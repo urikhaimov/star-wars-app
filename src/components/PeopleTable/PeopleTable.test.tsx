@@ -1,7 +1,7 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import PeopleTable from './PeopleTable';
 import { Person } from '../../types/swapi';
+import { describe, expect, it, vi } from 'vitest';
 const mockData: Person[] = [
   {
     name: 'Luke Skywalker',
@@ -17,12 +17,12 @@ const mockData: Person[] = [
   },
 ];
 
-const mockOnDelete = jest.fn();
-const mockOnEdit = jest.fn();
+const mockOnDelete = vi.fn();
+const mockOnEdit = vi.fn();
 
 describe('PeopleTable', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the table with correct headers', () => {

@@ -1,11 +1,12 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { describe, expect, it, vi } from 'vitest';
 import ModalForm, { ModalFormProps } from './ModalForm';
 
 describe('ModalForm', () => {
-  const mockOnClose = jest.fn();
-  const mockOnSubmit = jest.fn();
+  const mockOnClose = vi.fn();
+  const mockOnSubmit = vi.fn();
 
   const defaultProps: ModalFormProps = {
     open: true,
@@ -18,7 +19,7 @@ describe('ModalForm', () => {
     render(<ModalForm {...defaultProps} {...props} />);
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the dialog with create form when no initial data is provided', () => {

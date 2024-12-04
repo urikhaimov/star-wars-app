@@ -1,10 +1,10 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { describe, expect, it, vi } from 'vitest';
 import CategoryResults, { CategoryResultsProps } from './CategoryResults';
 
 describe('CategoryResults', () => {
-  const mockOnViewAll = jest.fn();
+  const mockOnViewAll = vi.fn();
 
   const defaultProps: CategoryResultsProps = {
     category: 'people',
@@ -17,7 +17,7 @@ describe('CategoryResults', () => {
   };
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the category title correctly', () => {

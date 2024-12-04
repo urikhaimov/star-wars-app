@@ -1,0 +1,34 @@
+name: Shared Actions
+description: 'Composite run action'
+shell: bash
+inputs:
+  node-version:
+    required: false
+    description: The version of Node to use.
+    default: "20.x"
+runs:
+  using: "composite"
+  steps:
+    - name: Use Node.js ${{ inputs.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        registry-url: "https://registry.npmjs.org"
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+
+    - name: Show working directory
+      shell: bash
+      run: |    
+        pwd
+        ls -lsa
+
+    - name: Install Project dependencies
+      shell: bash
+      run: |    
+        npm install
+
+    - name: Check installed versions
+      shell: bash
+      run: |
+        node -v
+        npm -v        
