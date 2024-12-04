@@ -4,6 +4,13 @@ import Loader from '../Loader';
 import Error from '../Error';
 import useSearchResults from '../../hooks/useSearchResults'
 
+const isEmpty = (data:Record<string, any[]>) => {
+  for (let key in data) {
+    if (data[key].length > 0) return false;
+  }
+  return true;
+}
+
 interface SearchResultsProps {
   query: string;
   categories: string[];
@@ -13,21 +20,23 @@ const SearchResults: React.FC<SearchResultsProps> = (props) => {
   const { query, categories } = props;
   let navigate = useNavigate();
   const handleCategorySelect = (category: string) => {
-   navigate(`/${category}`);
+    navigate(`/${category}`);
   };
   const { results, isLoading, isError } = useSearchResults(query, categories)
+  
+
   return (
 
-      
-        <div>
-           {!!isLoading && <Loader />}
-           {!!isError && <Error />}
-           {!isLoading && !isError && categories && categories.length===0 && <>not found</>}
-          {!isLoading && !isError && categories.length && categories.map((cat, index) =>
-            <CategoryResults key={index} category={cat} query={query} results={results[cat]} onViewAll={() => handleCategorySelect(cat)} />
-          )}
-        </div>
-   
+
+    <div>
+      {!!isLoading && <Loader />}
+      {!!isError && <Error />}
+      {!isLoading && !isError && query && isEmpty(results) && <>not found</>}
+      {!isLoading && !isError && categories.length && categories.map((cat, index) =>
+        <CategoryResults key={index} category={cat} query={query} results={results[cat]} onViewAll={() => handleCategorySelect(cat)} />
+      )}
+    </div>
+
   );
 }
 
