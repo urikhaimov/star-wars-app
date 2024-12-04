@@ -11,7 +11,7 @@ const SearchPage: React.FC = () => {
   const categories: string[] = data && Object.keys(data);
   const updateQuery = debounce((value: string) => {
     setDebouncedQuery(value);
-  }, 500) // 500ms debounce delay
+  }, 100) // 500ms debounce delay
 
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {

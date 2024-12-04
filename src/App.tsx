@@ -1,13 +1,11 @@
 import React from 'react';
-import * as Urik from 'react-router-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import SearchPage from './pages/SearchPage';
 import PeoplePage from './pages/PeoplePage';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient();
 
-console.log('Urik', Urik)
-const{ BrowserRouter , Routes, Route } = Urik
 const App: React.FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
