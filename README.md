@@ -5,6 +5,12 @@
 
 
 # StarWars App
+
+### Screenshot
+![image](https://github.com/user-attachments/assets/a0fb27d5-4061-433e-b1b1-157a92a5ddd9)
+
+### Live Demo
+[https://urikhaimov.github.io/star-wars-app/](https://urikhaimov.github.io/star-wars-app/)
     
 ## Installation
 
