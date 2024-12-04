@@ -1,5 +1,7 @@
 
-To create a `README.md` file based on the provided `package.json` snippet, you can follow this template. Since the snippet indicates the use of `vitest` for testing, I'll include relevant sections for that.
+[![Unit Tests](https://github.com/urikhaimov/star-wars-app/actions/workflows/unit.yml/badge.svg)](https://github.com/urikhaimov/star-wars-app/actions/workflows/unit.yml)
+[![CICD.Build](https://github.com/urikhaimov/star-wars-app/actions/workflows/build.yml/badge.svg)](https://github.com/urikhaimov/star-wars-app/actions/workflows/build.yml)
+[![Deploy static content to Pages](https://github.com/urikhaimov/star-wars-app/actions/workflows/static.yml/badge.svg)](https://github.com/urikhaimov/star-wars-app/actions/workflows/static.yml)
 
 ```markdown
 # Project Name
